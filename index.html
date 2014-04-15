@@ -1,0 +1,217 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+ <meta name="viewport" content="width=device-width, initial-scale=1">
+<title>無標題文件</title>
+<script src="js/demos/js/jquery.js"></script>
+<script src="js/jquery.mobile-1.4.2.min.js"></script>
+<link href="js/jquery.mobile-1.4.2.min.css" rel="stylesheet" type="text/css">
+
+<style>
+
+*{
+  font-family:arial,"微軟正黑體";
+}
+
+#header{
+  background: rgb(102,102,102);
+  background: -moz-linear-gradient(top,  rgba(102,102,102,1) 0%, rgba(51,51,51,1) 100%);
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(102,102,102,1)), color-stop(100%,rgba(51,51,51,1)));
+  background: -webkit-linear-gradient(top,  rgba(102,102,102,1) 0%,rgba(51,51,51,1) 100%);
+  background: -o-linear-gradient(top,  rgba(102,102,102,1) 0%,rgba(51,51,51,1) 100%);
+  background: -ms-linear-gradient(top,  rgba(102,102,102,1) 0%,rgba(51,51,51,1) 100%);
+  background: linear-gradient(to bottom,  rgba(102,102,102,1) 0%,rgba(51,51,51,1) 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#666666', endColorstr='#333333',GradientType=0 );
+}
+
+#member_btn {
+
+  position:absolute;
+  right:0px;
+  left:auto;
+  height:42px;
+  width:auto;
+  top:0px;
+  color:#FFF;
+  line-height: 40px;
+  padding:0px 20px;
+  text-shadow:none;
+  border-left:2px solid #666;
+  font-size:15px;
+  cursor: pointer
+}
+
+#member_btn:hover,
+#member_btn:active{
+
+  background: rgb(102,102,102);
+  background: -moz-linear-gradient(top,  rgba(102,102,102,1) 0%, rgba(119,119,119,1) 100%);
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(102,102,102,1)), color-stop(100%,rgba(119,119,119,1)));
+  background: -webkit-linear-gradient(top,  rgba(102,102,102,1) 0%,rgba(119,119,119,1) 100%);
+  background: -o-linear-gradient(top,  rgba(102,102,102,1) 0%,rgba(119,119,119,1) 100%);
+  background: -ms-linear-gradient(top,  rgba(102,102,102,1) 0%,rgba(119,119,119,1) 100%);
+  background: linear-gradient(to bottom,  rgba(102,102,102,1) 0%,rgba(119,119,119,1) 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#666666', endColorstr='#777777',GradientType=0 );
+
+
+}
+
+#header_title {
+    text-align:left;
+    margin-left:auto;
+    margin-right:auto;
+    text-shadow:none;
+    color:#FFF;
+    padding-left:20px;
+}
+
+.ui-content {
+
+  padding:0px;
+}
+
+#main_navi {
+  overflow:hidden;
+
+}
+
+#main_navi ul,
+#main_navi  li,
+#sub_navi ul,
+#sub_navi li{
+  padding:0px;
+  margin:0px;
+  list-style: none;
+
+}
+
+#main_navi   li {
+  float:left;
+  width:33.333%;
+}
+
+
+#main_navi a {
+  color:#FFF;
+  text-shadow:none;
+  text-align:center;
+  display:block;
+  padding:10px 0px;
+  border-right:1px solid #999;
+  font-size:24px;
+  text-shadow:0px 0px 5px #333;
+  cursor: pointer;
+
+}
+
+
+
+#main_navi {
+  background: rgb(183,183,183);
+  background: -moz-linear-gradient(top,  rgba(183,183,183,1) 27%, rgba(150,150,150,1) 99%);
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(27%,rgba(183,183,183,1)), color-stop(99%,rgba(150,150,150,1)));
+  background: -webkit-linear-gradient(top,  rgba(183,183,183,1) 27%,rgba(150,150,150,1) 99%);
+  background: -o-linear-gradient(top,  rgba(183,183,183,1) 27%,rgba(150,150,150,1) 99%);
+  background: -ms-linear-gradient(top,  rgba(183,183,183,1) 27%,rgba(150,150,150,1) 99%);
+  background: linear-gradient(to bottom,  rgba(183,183,183,1) 27%,rgba(150,150,150,1) 99%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#b7b7b7', endColorstr='#969696',GradientType=0 );
+
+
+}
+
+#main_navi a {
+  color:#FFF;
+
+}
+
+
+#sub_navi {
+  overflow:hidden;
+
+}
+
+#sub_navi   li:first-child  {
+  margin-right:80px;
+  float:left;
+}
+
+#sub_navi   li:last-child{
+  color:#FFF;
+ 
+} 
+
+#footer{
+  background:#333;
+}
+
+#footer h3{
+  color:#FFF;
+  text-shadow:none;
+}
+</style>
+
+</head>
+
+<body>
+<div id="home" data-role="page">
+  <div data-role="header" data-position="fixed" id="header">
+    <h3 data-role="none" id="header_title">鐵人論壇</h3>
+    <a id="member_btn" data-role="none">會員</a>
+  </div>
+  <div role="main" class="ui-content">
+    <div  id="main_navi" data-role="none">
+      <ul>
+        <li>
+          <a>新聞</a>
+        </li>
+        <li>
+          <a>專欄</a>
+        </li>
+        <li>
+          <a>討論區</a>
+        </li>
+      </ul>
+    </div>
+   <div  id="sub_navi" data-role="none">
+      <ul>
+        <li>
+          <a>遊戲類別</a>
+        </li>
+        <li>
+          <a>找版</a>
+        </li>
+      
+      </ul>
+    </div>
+    <table data-role="table" data-mode="columntoggle" class="ui-responsive ui-shadow gk-decorate" id="gk-414QBPp" is="jqm-table">
+      <thead>
+        <tr>
+          <th data-priority="1" > <a class="ui-btn">Button</a>  <a class="ui-btn">Button</a></th>
+       
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+           <td>test</td>
+         
+        </tr>
+        <tr>
+        
+          <td>test</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  <div data-role="footer" data-position="fixed"  id="footer">
+    <h3>Footer</h3>
+  </div>
+</div>
+<script>
+  $(document).one("mobileinit", function () {
+    $.mobile.ignoreContentEnabled=true;
+});
+
+</script>
+</body>
+</html>
